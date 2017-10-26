@@ -1,3 +1,20 @@
 body {
     background-color: #d3c7dc;
 }
+
+a:link {
+    color: rgb(95, 93, 93);
+}
+
+a:visited {
+    color: rgb(95, 93, 93);
+}
+
+a:hover {
+    color: rgb(192, 23, 107);
+}
+
+/* selected link */
+a:active {
+    color: rgb(0, 217, 255);
+}
