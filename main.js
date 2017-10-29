@@ -1,4 +1,3 @@
-console.log('hello depuis main');
 const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
