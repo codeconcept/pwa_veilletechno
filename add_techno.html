@@ -17,7 +17,12 @@
           <h1>Ajouter une techno</h1>
           <h2>Ajouter cette techno :</h2>
           <div id="addform">
-              <input type="text" placeholder="nom de la techno" id="technoname"> <button id="add">ajouter</button>
+              <form id="add-techno-form">
+                  <input type="text" placeholder="nom de la techno" id="techno-name"> 
+                  <input type="text" placeholder="description" id="techno-description"> 
+                  <input type="text" placeholder="url du site officiel" id="techno-url">                   
+                  <button type="submit">ajouter</button>
+              </form>
           </div>
           <script src="add_techno.js"></script>
         </body>

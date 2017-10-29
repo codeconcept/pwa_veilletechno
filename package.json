@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server --port=3000",
+    "jsonserver": "json-server -p 3001 --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
