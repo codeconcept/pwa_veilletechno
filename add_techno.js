@@ -1,5 +1,3 @@
-console.log('hello depuis add_techno');
-
 const technonameField = document.querySelector('#techno-name');
 const technoDescriptionField = document.querySelector('#techno-description');
 const technoUrlField = document.querySelector('#techno-url');
