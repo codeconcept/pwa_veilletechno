@@ -25,13 +25,14 @@ if(navigator.serviceWorker) {
 if (window.Notification && window.Notification !== 'denied') {
     Notification.requestPermission(perm => {
         if(perm === 'granted') {
-            const options = {
-                body: 'Je suis le body de la notification',
-                icon: 'images/icons/icon-72x72.png'
-            }
-            const notif = new Notification('Hello notification', options);
+            // const options = {
+            //     body: 'Je suis le body de la notification',
+            //     icon: 'images/icons/icon-72x72.png'
+            // }
+            // const notif = new Notification('Hello notification', options);
+            console.log('autoridation de recevoir des notifications acceptée')
         } else {
-            console.log('autorisation de recevoir des notification réfusée');
+            console.log('autorisation de recevoir des notifications réfusée');
         }
     })
 }
