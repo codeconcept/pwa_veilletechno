@@ -1,4 +1,6 @@
 {
+  "name": "Veille Techno",
+  "short_name": "VTechno",
   "theme_color": "#d3c7dc",
   "background_color": "#d3c7dc",
   "display": "standalone",
