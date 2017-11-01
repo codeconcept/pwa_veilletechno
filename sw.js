@@ -65,9 +65,24 @@ self.addEventListener('fetch', evt => {
 });
 
 self.registration.showNotification('Notif depuis le sw', {
-    body: 'je suis une notification dite "persistante"'
+    body: 'je suis une notification dite "persistante"',
+    actions: [
+        {action: 'accept', title: 'accepter'},
+        {action: 'refuse', title: 'refuser'}
+    ]
 });
 
 self.addEventListener('notificationclose', evt => {
     console.log('notification fermée', evt);
-})
+});
+
+self.addEventListener('notificationclick', evt => {
+    if(evt.action === 'accept') {
+        console.log('vous avez accepté');
+    } else if(evt.action === 'refuse') {
+        console.log('vous avez refusé')
+    } else {
+        console.log('vous avez cliqué sur la notification (pas sur un des boutons)')
+    }
+    evt.notification.close();
+});
