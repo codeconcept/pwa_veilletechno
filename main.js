@@ -30,7 +30,7 @@ if (window.Notification && window.Notification !== 'denied') {
             //     icon: 'images/icons/icon-72x72.png'
             // }
             // const notif = new Notification('Hello notification', options);
-            console.log('autoridation de recevoir des notifications acceptée')
+            console.log('autorisation de recevoir des notifications acceptée')
         } else {
             console.log('autorisation de recevoir des notifications réfusée');
         }
