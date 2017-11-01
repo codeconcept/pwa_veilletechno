@@ -25,7 +25,11 @@ if(navigator.serviceWorker) {
 if (window.Notification && window.Notification !== 'denied') {
     Notification.requestPermission(perm => {
         if(perm === 'granted') {
-            const notif = new Notification('Hello notification');
+            const options = {
+                body: 'Je suis le body de la notification',
+                icon: 'images/icons/icon-72x72.png'
+            }
+            const notif = new Notification('Hello notification', options);
         } else {
             console.log('autorisation de recevoir des notification réfusée');
         }
