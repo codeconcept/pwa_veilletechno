@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.0"
+    "live-server": "^1.2.0",
+    "push-server": "^0.5.0",
+    "web-push": "^3.2.4"
   }
 }
