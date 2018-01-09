@@ -13,7 +13,8 @@ function getTechno(id) {
     })
 }
 
-function putTechno(value, key) {
+// test without id as second argument
+function putTechno(value) {
     return technoDb().then(db => {
         const tx = db.transaction('techno', 'readwrite');
         tx.objectStore('techno').put(value);
