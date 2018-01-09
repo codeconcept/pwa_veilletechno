@@ -2,7 +2,7 @@ const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
     // fetching from real node server
-    fetch('http://localhost:8080/technos')
+    fetch('https://nodetestapi-thyrrtzgdz.now.sh/technos')
         .then(response => response.json())
         .then(technos => {
             console.log('response from loadTechnologies', technos);
