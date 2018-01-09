@@ -1,7 +1,7 @@
 function technoDb() {
     return idb.open('techno-store', 2, upgradeDB => {
         switch (upgradeDB.oldVersion) {
-            case 0: upgradeDB.createObjectStore('techno')
+            case 0: upgradeDB.createObjectStore('techno', { autoIncrement : true })
         }
     })
 }
@@ -13,11 +13,11 @@ function getTechno(id) {
     })
 }
 
-// test without id as second argument
-function putTechno(value) {
+function putTechno(value, key) {
+    console.log(value, key);
     return technoDb().then(db => {
         const tx = db.transaction('techno', 'readwrite');
-        tx.objectStore('techno').put(value);
+        tx.objectStore('techno').put(value, key);
         return tx.complete;
     });
 }
