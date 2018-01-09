@@ -16,7 +16,7 @@ function getTechno(id) {
 function putTechno(value, key) {
     return technoDb().then(db => {
         const tx = db.transaction('techno', 'readwrite');
-        tx.objectStore('techno').put(value, key);
+        tx.objectStore('techno').put(value);
         return tx.complete;
     });
 }
