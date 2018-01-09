@@ -6,13 +6,18 @@
   "scripts": {
     "start": "live-server --port=3000",
     "jsonserver": "json-server -p 3001 --watch db.json",
+    "nodeserver": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "live-server": "^1.2.0",
+    "mongodb": "^3.0.1",
+    "mongoose": "^4.13.9",
     "push-server": "^0.5.0",
     "web-push": "^3.2.4"
   }
