@@ -20,6 +20,9 @@
   function promisifyRequestCall(obj, method, args) {
     var request;
     var p = new Promise(function(resolve, reject) {
+      console.log('obj', JSON.stringify(obj));
+      console.log('method', method);
+      console.log('args', args);
       request = obj[method].apply(obj, args);
       promisifyRequest(request).then(resolve, reject);
     });
@@ -53,6 +56,10 @@
     properties.forEach(function(prop) {
       if (!(prop in Constructor.prototype)) return;
       ProxyClass.prototype[prop] = function() {
+        console.log('this', this);
+        console.log('targetProp', targetProp);
+        console.log('prop', prop);
+        console.log('arguments', arguments);
         return promisifyRequestCall(this[targetProp], prop, arguments);
       };
     });

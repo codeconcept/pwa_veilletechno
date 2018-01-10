@@ -30,7 +30,10 @@ addTechnoForm.addEventListener('submit', evt => {
                 console.log('we are probably offline');
                 navigator.serviceWorker.ready.then(registration => {
                     // put techno in IndexedDB for later syncing
-                    return putTechno(payload, technoDb.id).then(() => {
+                    console.log('dans le catch de add_techno car offline');
+                    console.log('dans le catch de add_techno id vaut', payload.id);
+                    console.log()
+                    return putTechno(payload, payload.id).then(() => {
                         // register a sync with the ServiceWorker
                         return registration.sync.register('sync-technos')
                     });

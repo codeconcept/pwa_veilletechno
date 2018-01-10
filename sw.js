@@ -129,7 +129,8 @@ self.addEventListener('sync', event => {
                     })
                         .then(() => {
                             console.log('Sent to server');
-                            return putTechno(Object.assign({}, techno, { unsynced: false }));
+                            console.log('id pasé à putTechno', techno.id);
+                            return putTechno(Object.assign({}, techno, { unsynced: false }), techno.id);
                         })
                 }))
             })

@@ -14,7 +14,8 @@ function getTechno(id) {
 }
 
 function putTechno(value, key) {
-    console.log(value, key);
+    console.log('val dans putTechno', value);
+    console.log('key dans putTechno', key);
     return technoDb().then(db => {
         const tx = db.transaction('techno', 'readwrite');
         tx.objectStore('techno').put(value, key);
