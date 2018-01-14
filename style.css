@@ -19,3 +19,6 @@ a:hover {
 a:active {
     color: rgb(0, 217, 255);
 }
+
+/* for debugging all elements sizes and margins */
+/* *{ border:1px solid red !important} */
