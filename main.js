@@ -66,8 +66,8 @@ if (navigator.serviceWorker) {
                             // TODO post to a subscription DB
                             console.log('newSubscription', newSubscription);
                             // no more keys proprety directly visible on the subscription objet. So you have to use getKey()
-                            const key = subscription.getKey('p256dh');
-                            const auth = subscription.getKey('auth');
+                            const key = newSubscription.getKey('p256dh');
+                            const auth = newSubscription.getKey('auth');
                             console.log('p256dh key', key);
                             console.log('auth key', auth);
                         })
